@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLNHA_SACH.Modules
 {
-    class XLNHANVIEN
+    class XLNHANVIEN:XLBANG
     {
+        public XLNHANVIEN() : base("NHANVIEN") { }
+        public XLNHANVIEN(String pQuery) : base("XLNHANVIEN", pQuery) { }
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLNHA_SACH.Modules
 {
-    class XLKHACHHANG
+    class XLKHACHHANG:XLBANG
     {
+        public XLKHACHHANG() : base("KHACHHANG") { }
+        public XLKHACHHANG(String pQuery) : base("KHACHHANG", pQuery) { }
     }
 }

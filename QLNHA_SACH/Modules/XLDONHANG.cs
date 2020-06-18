@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace QLNHA_SACH.Modules
 {
-    class XLDONHANG
+    class XLDONHANG:XLBANG
+
     {
+        public XLDONHANG() : base("DONHANG") { }
+        public XLDONHANG(String pQuery) : base("DONHANG", pQuery) { }
     }
 }

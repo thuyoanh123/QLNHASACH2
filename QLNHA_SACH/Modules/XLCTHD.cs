@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLNHA_SACH.Modules
 {
-    class XLCTHD
+    class XLCTHD:XLBANG
     {
+        public XLCTHD() : base("CTHD") { }
+        public XLCTHD(String pQuery) : base("CTHD", pQuery) { }
     }
 }

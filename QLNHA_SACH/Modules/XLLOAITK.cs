@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLNHA_SACH.Modules
 {
-    class XLLOAITK
+    class XLLOAITK:XLBANG
     {
+        public XLLOAITK() : base("LOAITK") { }
+        public XLLOAITK(String pQuery) : base("LOAITK", pQuery) { }
     }
 }
