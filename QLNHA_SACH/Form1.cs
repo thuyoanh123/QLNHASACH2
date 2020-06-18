@@ -11,7 +11,7 @@ namespace QLNHA_SACH
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
-        XLNHANVIEN tblNhanVien
+        XLNHANVIEN tblNhanVien;
 
         public Form1()
         {

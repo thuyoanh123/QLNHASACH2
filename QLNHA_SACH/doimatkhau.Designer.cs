@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(doimatkhau));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPassNew = new System.Windows.Forms.TextBox();
+            this.txtConfirmPass = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.bntCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,51 +58,59 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhập mật khẩu Lại:";
             // 
-            // textBox1
+            // txtPassNew
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtPassNew.Location = new System.Drawing.Point(156, 37);
+            this.txtPassNew.Name = "txtPassNew";
+            this.txtPassNew.Size = new System.Drawing.Size(115, 20);
+            this.txtPassNew.TabIndex = 2;
             // 
-            // textBox2
+            // txtConfirmPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtConfirmPass.Location = new System.Drawing.Point(156, 69);
+            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.Size = new System.Drawing.Size(115, 20);
+            this.txtConfirmPass.TabIndex = 3;
             // 
-            // simpleButton1
+            // btnUpdate
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(83, 122);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(87, 34);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Cập Nhật";
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(83, 122);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(87, 34);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Cập Nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
-            // simpleButton2
+            // bntCancel
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(176, 122);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 34);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "Không";
+            this.bntCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.bntCancel.Location = new System.Drawing.Point(176, 122);
+            this.bntCancel.Name = "bntCancel";
+            this.bntCancel.Size = new System.Drawing.Size(75, 34);
+            this.bntCancel.TabIndex = 5;
+            this.bntCancel.Text = "Không";
+            this.bntCancel.Click += new System.EventHandler(this.bntCancel_Click_1);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // doimatkhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 185);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.bntCancel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txtConfirmPass);
+            this.Controls.Add(this.txtPassNew);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "doimatkhau";
             this.Text = "doimatkhau";
+            this.Load += new System.EventHandler(this.doimatkhau_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,9 +120,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.TextBox txtPassNew;
+        private System.Windows.Forms.TextBox txtConfirmPass;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton bntCancel;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
