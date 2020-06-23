@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace QLNHA_SACH.Modules
+namespace QLNHASACH.Moduls
 {
     class XLBANG : DataTable
     {
         #region Fields
-        public static string cnnStr = "Data Source=.;Initial Catalog=QLNHASACH;Integrated Security=True";
+        public static string cnnStr = "Data Source=DESKTOP-RD7GGH3\\SQLEXPRESS;Initial Catalog=QLNHASACH;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
         private string _query; // Cau truy van
@@ -174,6 +174,6 @@ namespace QLNHA_SACH.Modules
             }
         }
         #endregion
-    }
 
+    }
 }

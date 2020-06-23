@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLNHA_SACH.Modules
+namespace QLNHASACH.Moduls
 {
-    class XLDONHANG:XLBANG
-
+    class XLDONHANG: XLBANG
     {
         public XLDONHANG() : base("DONHANG") { }
-        public XLDONHANG(String pQuery) : base("DONHANG", pQuery) { }
+        public XLDONHANG(string pQuery) : base("DONHANG", pQuery) { }
     }
 }

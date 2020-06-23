@@ -6,7 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 
-namespace QLNHA_SACH
+namespace QLNHASACH
 {
     static class Program
     {
@@ -20,7 +20,7 @@ namespace QLNHA_SACH
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new nhanvien());
+            Application.Run(new frmMain());
         }
     }
 }

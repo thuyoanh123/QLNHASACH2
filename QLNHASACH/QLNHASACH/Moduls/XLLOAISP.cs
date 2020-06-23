@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLNHA_SACH.Modules
+namespace QLNHASACH.Moduls
 {
-    class XLLOAISP:XLBANG
+    class XLLOAISP: XLBANG
     {
         public XLLOAISP() : base("LOAISP") { }
-        public XLLOAISP(String pQuery) : base("LOAISP", pQuery) { }
+        public XLLOAISP(string pQuery) : base("LOAISP", pQuery) { }
     }
 }

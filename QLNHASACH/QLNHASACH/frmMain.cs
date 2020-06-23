@@ -3,26 +3,27 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 
-namespace QLNHA_SACH
+namespace QLNHASACH
 {
-    public partial class nhanvien : Form
+    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public nhanvien()
+        public frmMain()
         {
             InitializeComponent();
         }
         public string maNV;
-        doimatkhau fDoiMatKhau;
-        private void nhanvien_Load(object sender, EventArgs e)
+        fmDoiMatKhau fDoiMatKhau;
+
+        private void frmMain_Load(object sender, EventArgs e)
         {
             enableControl(-1);
-            Form1 f = new Form1();
+            fmDangNhap f = new fmDangNhap();
             f.MdiParent = this;
             f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
@@ -30,7 +31,7 @@ namespace QLNHA_SACH
         }
         public void enableControl(int maLTK)
         {
-            switch (maLTK)
+            switch(maLTK)
             {
                 case 1: //admin
                     btnDangXuat.Enabled = true;
@@ -80,14 +81,27 @@ namespace QLNHA_SACH
                     btnTaoHoaDon.Enabled = false;
                     btnThongKe.Enabled = false;
                     break;
+
+
+
             }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //xu li dong tat ca cac form con
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+            frmMain_Load(sender, e);
         }
 
         private void btnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (fDoiMatKhau == null)
             {
-                fDoiMatKhau = new doimatkhau();
+                fDoiMatKhau = new fmDoiMatKhau();
                 fDoiMatKhau.MdiParent = this;
                 fDoiMatKhau.WindowState = FormWindowState.Maximized;
                 fDoiMatKhau.Show();
@@ -98,19 +112,7 @@ namespace QLNHA_SACH
                 fDoiMatKhau.Show();
             }
         }
-
-        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            /*foreach(Form f in.Mdichildren)
-            {
-                f.Close();
-
-            }
-            Form1_Load(sender, e);*/
-        }
     }
+
     
 }
-
-
-       

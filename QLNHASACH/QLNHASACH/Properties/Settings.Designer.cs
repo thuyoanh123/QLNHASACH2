@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QLNHA_SACH.Properties
+namespace QLNHASACH.Properties
 {
 
 
